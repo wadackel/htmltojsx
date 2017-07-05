@@ -1,6 +1,7 @@
 # htmltojsx
 
 [![Build Status](http://img.shields.io/travis/tsuyoshiwada/htmltojsx.svg?style=flat-square)](https://travis-ci.org/tsuyoshiwada/htmltojsx)
+[![npm (scoped)](https://img.shields.io/npm/v/@tsuyoshiwada/htmltojsx.svg?style=flat-square)](https://www.npmjs.com/package/@tsuyoshiwada/htmltojsx)
 
 > HTML to JSX converter. Forked from [reactjs/react-magic](https://github.com/reactjs/react-magic). Support for SVG attributes.
 
