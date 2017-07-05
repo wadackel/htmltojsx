@@ -44,8 +44,8 @@ const HTMLtoJSX = require('@tsuyoshiwada/htmltojsx');
 
 // Default options
 const converter = new HTMLtoJSX({
-  createClass: true,
-  indent: '  ',
+  createClass: false, // default `true`
+  indent: '  ',       // default `'  '`
 });
 
 const html = `
