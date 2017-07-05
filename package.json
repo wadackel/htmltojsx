@@ -2,7 +2,7 @@
   "name": "@tsuyoshiwada/htmltojsx",
   "version": "0.0.1",
   "description": "HTML to JSX converter. Forked from reactjs/react-magic. Support for SVG attributes.",
-  "lib": "htmltojsx.js",
+  "main": "htmltojsx.js",
   "files": [
     "htmltojsx.js",
     "test"
