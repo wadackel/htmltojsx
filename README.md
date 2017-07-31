@@ -21,11 +21,55 @@
 
 ## What is different from the original?
 
-It differs only in that SVG attributes can be converted! Other than that it is the same as the original.
+The support of SVG is different from the original.  
+You can convert attributes and tag names owned by SVG.
 
-I am sending a [patch PR](https://github.com/reactjs/react-magic/pull/136) to the original.  
-If PR is merged, this package is unnecessary.
+The conversion result differs as follows.
 
+**Actual:**
+
+```html
+<svg class="foo">
+  <defs>
+    <linearGradient x1="75.9899742%" y1="91.918713%" x2="19.295843%" y2="7.23037329%" id="linearGradient-1">
+      <stop stop-color="#FFF8B3" offset="0%"></stop>
+      <stop stop-color="#E2CBE3" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <path fill-opacity="0.5" d="M144.296465,117.379726 L192.379726,69.2964646 L144.296465,21.2132034 L106.796465,58.7132034 L69.2964646,21.2132034 L21.2132034,69.2964646 L69.2964646,117.379726 L106.796465,79.8797257 L144.296465,117.379726 Z M69.2964646,138.592929 L0,69.2964646 L69.2964646,0 L106.796465,37.5 L144.296465,0 L213.592929,69.2964646 L144.296465,138.592929 L106.796465,101.092929 L69.2964646,138.592929 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+</svg>
+```
+
+**htmltojsx (original):**
+
+```HTML
+<svg className="foo">
+  <defs>
+    <lineargradient x1="75.9899742%" y1="91.918713%" x2="19.295843%" y2="7.23037329%" id="linearGradient-1">
+      <stop stop-color="#FFF8B3" offset="0%" />
+      <stop stop-color="#E2CBE3" offset="100%" />
+    </lineargradient>
+  </defs>
+  <path fill-opacity="0.5" d="M144.296465,117.379726 L192.379726,69.2964646 L144.296465,21.2132034 L106.796465,58.7132034 L69.2964646,21.2132034 L21.2132034,69.2964646 L69.2964646,117.379726 L106.796465,79.8797257 L144.296465,117.379726 Z M69.2964646,138.592929 L0,69.2964646 L69.2964646,0 L106.796465,37.5 L144.296465,0 L213.592929,69.2964646 L144.296465,138.592929 L106.796465,101.092929 L69.2964646,138.592929 Z" id="Combined-Shape" fill="url(#linearGradient-1)" />
+</svg>
+```
+
+* `<lineargradient>` is in lowercase letters. (Should be camel case)
+* `fill-opacity` is in kebab-case letters. (Should be camel case)
+
+**@tsuyoshiwada/htmltojsx (this package):**
+
+```javascript
+<svg className="foo">
+  <defs>
+    <linearGradient x1="75.9899742%" y1="91.918713%" x2="19.295843%" y2="7.23037329%" id="linearGradient-1">
+      <stop stopColor="#FFF8B3" offset="0%" />
+      <stop stopColor="#E2CBE3" offset="100%" />
+    </linearGradient>
+  </defs>
+  <path fillOpacity="0.5" d="M144.296465,117.379726 L192.379726,69.2964646 L144.296465,21.2132034 L106.796465,58.7132034 L69.2964646,21.2132034 L21.2132034,69.2964646 L69.2964646,117.379726 L106.796465,79.8797257 L144.296465,117.379726 Z M69.2964646,138.592929 L0,69.2964646 L69.2964646,0 L106.796465,37.5 L144.296465,0 L213.592929,69.2964646 L144.296465,138.592929 L106.796465,101.092929 L69.2964646,138.592929 Z" id="Combined-Shape" fill="url(#linearGradient-1)" />
+</svg>
+```
 
 
 
