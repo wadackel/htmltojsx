@@ -1,7 +1,15 @@
 # htmltojsx
 
+[PR136]: https://github.com/reactjs/react-magic/pull/136
+[PR138]: https://github.com/reactjs/react-magic/pull/138
+
 [![Build Status](http://img.shields.io/travis/tsuyoshiwada/htmltojsx.svg?style=flat-square)](https://travis-ci.org/tsuyoshiwada/htmltojsx)
 [![npm (scoped)](https://img.shields.io/npm/v/@tsuyoshiwada/htmltojsx.svg?style=flat-square)](https://www.npmjs.com/package/@tsuyoshiwada/htmltojsx)
+
+> :warning: **Deprecated** :warning:  
+> Patches [#136][PR136] and [#138][PR138] have been merged into the original. Therefore, this package is no longer needed: tada:
+
+---
 
 > HTML to JSX converter. Forked from [reactjs/react-magic](https://github.com/reactjs/react-magic). Support for SVG attributes.
 

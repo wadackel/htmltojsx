@@ -1,7 +1,7 @@
 {
   "name": "@tsuyoshiwada/htmltojsx",
-  "version": "0.0.4",
-  "description": "HTML to JSX converter. Forked from reactjs/react-magic. Support for SVG attributes.",
+  "version": "0.0.5",
+  "description": "[DEPRECATED] HTML to JSX converter. Forked from reactjs/react-magic. Support for SVG attributes.",
   "main": "htmltojsx.js",
   "files": [
     "htmltojsx.js",
@@ -30,9 +30,11 @@
   },
   "homepage": "https://github.com/tsuyoshiwada/htmltojsx#readme",
   "dependencies": {
+    "htmltojsx": "^0.3.0",
     "jsdom-no-contextify": "~3.1.0",
     "react": "~15.4.1",
-    "react-dom": "~15.4.1"
+    "react-dom": "~15.4.1",
+    "warning": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^20.0.4"
